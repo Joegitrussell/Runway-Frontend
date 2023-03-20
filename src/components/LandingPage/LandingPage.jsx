@@ -1,4 +1,4 @@
-import Navbar from "../NavBar";
+import Navbar from "../Navbar";
 import landingPageImage from "../../assets/images/RunWay_ob1.png";
 
 export default function LandingPage() {
