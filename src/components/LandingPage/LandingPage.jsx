@@ -1,13 +1,12 @@
 import Navbar from "../Navbar";
 import landingPageImage from "../../assets/images/RunWay_ob1.png";
+import Runway from "../../assets/images/RunWay.png";
 
 export default function LandingPage() {
   return (
     <div className="flex flex-col justify-center items-center">
       <Navbar />
-      <h1 className="text-4xl font-bold mb-6 text-center text-gray-900">
-        RunWay
-      </h1>
+      <img src={Runway} alt="runway-header" className="w-3/4 mt-6" />
       <img
         src={landingPageImage}
         alt="animated man and globe"

@@ -1,11 +1,19 @@
 ---
 import LandingPage from '../components/LandingPage/LandingPage.jsx'
-import Layout from '../layouts/Layout.astro';
-
 
 ---
-<main class="landing-page">
-  <Layout title="Welcome to Runway.">
-    <LandingPage />
-  </Layout>
-</main>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Welcome to RunWay!</title>
+  </head>
+  <body class="bg-gradient-to-r from-blue-500">
+      <LandingPage />
+  </body>
+</html>
+
+
+
