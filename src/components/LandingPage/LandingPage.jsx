@@ -12,7 +12,7 @@ export default function LandingPage() {
         alt="animated man and globe"
         className="w-96 h-96 object-cover rounded-md mb-6"
       />
-      <p className="text-lg text-center text-gray-700 mb-6">
+      <p className="text-lg text-center text-gray-700 mb-6 font-sans-serif font-bold italic subpixel-antialiased">
         Welcome to Runway! Ready to travel smarter, not harder? Tell us your
         travel budget and we'll show you where you can go. Let's explore!
       </p>
