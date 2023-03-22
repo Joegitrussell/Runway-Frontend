@@ -1,4 +1,4 @@
-import Navbar from "../Navbar";
+import Navbar from "../Navbar/Navbar";
 import landingPageImage from "../../assets/images/RunWay_ob1.png";
 import Runway from "../../assets/images/RunWay.png";
 
@@ -16,9 +16,7 @@ export default function LandingPage() {
         Welcome to Runway! Ready to travel smarter, not harder? Tell us your
         travel budget and we'll show you where you can go. Let's explore!
       </p>
-      <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-        Prepare for takeoff!
-      </button>
+      <button className="btn mb-20">Prepare for takeoff!</button>
     </div>
   );
 }
