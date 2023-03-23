@@ -1,8 +1,20 @@
+import { useState } from "react";
 import Navbar from "../Navbar/Navbar";
 import landingPageImage from "../../assets/images/RunWay_ob1.png";
 import Runway from "../../assets/images/RunWay.png";
+import BudgetPage from "../BudgetPage/BudgetPage.jsx";
+import { handle } from "express/lib/application";
 
 export default function LandingPage() {
+
+  // const [showBudgetPage, setShowBudgetPage] = useState(false);
+
+  const handleTakeoffClick = () => {
+    console.log("clicked");
+  };
+
+  console.log("Fuck off")
+
   return (
     <div className="flex flex-col justify-center items-center">
       <Navbar />
@@ -16,7 +28,7 @@ export default function LandingPage() {
         Welcome to Runway! Ready to travel smarter, not harder? Tell us your
         travel budget and we'll show you where you can go. Let's explore!
       </p>
-      <button className="btn mb-20">Prepare for takeoff!</button>
+      <button className="btn mb-20" onClick={handleTakeoffClick}>Prepare for takeoff!</button>
     </div>
   );
 }
