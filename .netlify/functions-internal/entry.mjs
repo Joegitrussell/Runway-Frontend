@@ -3,6 +3,7 @@ import React, { createElement } from 'react';
 import ReactDOM from 'react-dom/server';
 import { s as server_default, f as deserializeManifest } from './chunks/astro.01be9555.mjs';
 import { _ as _page0 } from './chunks/pages/all.19583006.mjs';
+
 import 'mime';
 import 'cookie';
 import 'html-escaper';
@@ -11,7 +12,9 @@ import 'slash';
 import 'path-to-regexp';
 import 'string-width';
 /* empty css                                 */import 'react/jsx-runtime';
+
 import 'express/lib/application.js';
+
 
 /**
  * Astro passes `children` as a string of HTML, so we need
@@ -212,7 +215,9 @@ const _renderer1 = {
 const pageMap = new Map([["src/pages/index.astro", _page0],]);
 const renderers = [Object.assign({"name":"astro:jsx","serverEntrypoint":"astro/jsx/server.js","jsxImportSource":"astro"}, { ssr: server_default }),Object.assign({"name":"@astrojs/react","clientEntrypoint":"@astrojs/react/client.js","serverEntrypoint":"@astrojs/react/server.js","jsxImportSource":"react"}, { ssr: _renderer1 }),];
 
-const _manifest = Object.assign(deserializeManifest({"adapterName":"@astrojs/netlify/functions","routes":[{"file":"","links":["_astro/index.d52c9967.css"],"scripts":[],"routeData":{"route":"/","type":"page","pattern":"^\\/$","segments":[],"params":[],"component":"src/pages/index.astro","pathname":"/","prerender":false,"_meta":{"trailingSlash":"ignore"}}}],"base":"/","markdown":{"drafts":false,"syntaxHighlight":"shiki","shikiConfig":{"langs":[],"theme":"github-dark","wrap":false},"remarkPlugins":[],"rehypePlugins":[],"remarkRehype":{},"gfm":true,"smartypants":true,"contentDir":"file:///home/taylorhall/Desktop/myRepos/runway-project/Runway-Frontend/src/content/"},"pageMap":null,"propagation":[],"renderers":[],"entryModules":{"\u0000@astrojs-ssr-virtual-entry":"_@astrojs-ssr-virtual-entry.mjs","@astrojs/react/client.js":"_astro/client.97e10384.js","astro:scripts/before-hydration.js":""},"assets":["/_astro/RunWay.cbe27d70.png","/_astro/RunWay_ob1.9a4e663d.png","/_astro/index.d52c9967.css","/favicon.svg","/_astro/client.97e10384.js"]}), {
+
+const _manifest = Object.assign(deserializeManifest({"adapterName":"@astrojs/netlify/functions","routes":[{"file":"","links":["_astro/index.de66ce93.css"],"scripts":[],"routeData":{"route":"/","type":"page","pattern":"^\\/$","segments":[],"params":[],"component":"src/pages/index.astro","pathname":"/","prerender":false,"_meta":{"trailingSlash":"ignore"}}}],"base":"/","markdown":{"drafts":false,"syntaxHighlight":"shiki","shikiConfig":{"langs":[],"theme":"github-dark","wrap":false},"remarkPlugins":[],"rehypePlugins":[],"remarkRehype":{},"gfm":true,"smartypants":true,"contentDir":"file:///home/taylorhall/Desktop/myRepos/runway-project/Runway-Frontend/src/content/"},"pageMap":null,"propagation":[],"renderers":[],"entryModules":{"\u0000@astrojs-ssr-virtual-entry":"_@astrojs-ssr-virtual-entry.mjs","@astrojs/react/client.js":"_astro/client.97e10384.js","astro:scripts/before-hydration.js":""},"assets":["/_astro/RunWay.cbe27d70.png","/_astro/RunWay_ob1.9a4e663d.png","/_astro/index.de66ce93.css","/favicon.svg","/_astro/client.97e10384.js"]}), {
+
 	pageMap: pageMap,
 	renderers: renderers
 });
