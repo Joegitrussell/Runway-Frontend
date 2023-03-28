@@ -2,17 +2,8 @@ import { useState } from "react";
 import Navbar from "../Navbar/Navbar";
 import landingPageImage from "../../assets/images/RunWay_ob1.png";
 import Runway from "../../assets/images/RunWay.png";
-import BudgetPage from "../BudgetPage/BudgetPage.jsx";
-import { handle } from "express/lib/application";
 
 export default function LandingPage() {
-
-  const [showBudgetPage, setShowBudgetPage] = useState(false);
-
-  const handleTakeoffClick = () => {
-    setShowBudgetPage(true);
-    console.log("clicked");
-  };
 
   console.log("Fuck off")
 
