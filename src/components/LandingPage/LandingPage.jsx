@@ -29,7 +29,7 @@ export default function LandingPage() {
           type="text" 
           placeholder="£3000"
         />
-        <button className="btn mb-20 bg-secondary text-black w-64 h-12 font-style: italic" onClick={handleTakeoffClick}>Prepare for takeoff!</button>
+        <button className="btn mb-20 bg-secondary text-black w-64 h-12 font-style: italic">Prepare for takeoff!</button>
       </div>
     </div>
   );
