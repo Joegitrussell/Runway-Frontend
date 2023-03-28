@@ -7,9 +7,10 @@ import { handle } from "express/lib/application";
 
 export default function LandingPage() {
 
-  // const [showBudgetPage, setShowBudgetPage] = useState(false);
+  const [showBudgetPage, setShowBudgetPage] = useState(false);
 
   const handleTakeoffClick = () => {
+    setShowBudgetPage(true);
     console.log("clicked");
   };
 
@@ -29,6 +30,8 @@ export default function LandingPage() {
         travel budget and we'll show you where you can go. Let's explore!
       </p>
       <button className="btn mb-20" onClick={handleTakeoffClick}>Prepare for takeoff!</button>
+      <BudgetPage></BudgetPage>
+
     </div>
   );
 }
