@@ -8,8 +8,6 @@ import landingPageImage from "../../assets/images/RunWay_ob1.png";
 import Runway from "../../assets/images/RunWay.png";
 
 export default function LandingPage() {
-  console.log("Fuck off");
-
   const [userBudget, setBudget] = useState("");
 
   return (
