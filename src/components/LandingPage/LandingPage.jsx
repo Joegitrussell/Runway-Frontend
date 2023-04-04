@@ -1,14 +1,22 @@
 import { useState } from "react";
-// import { Link } from "@astrojs/components";
 import { useStore } from "@nanostores/react";
-import { budgetStore } from "../../runwayStore.js";
-import { addBudget } from "../../runwayStore.js";
+import { budgetStore } from "../../store/runwayStore.js";
 import Navbar from "../Navbar/Navbar";
 import landingPageImage from "../../assets/images/RunWay_ob1.png";
 import Runway from "../../assets/images/RunWay.png";
 
 export default function LandingPage() {
-  const [userBudget, setBudget] = useState("");
+  const [userBudget, setUserBudget] = useState("");
+  const budget = useStore(budgetStore);
+
+  const handleBudgetChange = (event) => {
+    setUserBudget(parseInt(event.target.value));
+  };
+
+  const handleButtonClick = () => {
+    budgetStore.set(userBudget);
+    console.log("Budget: ", budget, "budgetStore: ", budgetStore.value);
+  };
 
   return (
     <div className="flex flex-col justify-center items-center md:container d-mx-auto">
@@ -33,13 +41,13 @@ export default function LandingPage() {
           className="bg-white text-black rounded-lg w-64 h-12 p-2"
           type="text"
           placeholder="£"
-          onChange={(e) => setBudget(e.target.value)}
+          onChange={handleBudgetChange}
         />
         <button
           className="btn mb-20 bg-secondary text-black w-64 h-12 font-style: italic"
-          onClick={() => addBudget(userBudget)}
+          onClick={handleButtonClick}
         >
-          Prepare for takeoff!
+          <a href="/results">Prepare for takeoff!</a>
         </button>
       </div>
     </div>
