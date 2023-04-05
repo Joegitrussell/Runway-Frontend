@@ -1,20 +1,18 @@
 ---
+import Layout from '../layouts/Layout.astro';
 import LandingPage from '../components/LandingPage/LandingPage.jsx'
 import ResultsPage from '../components/ResultsPage/ResultsPage.jsx';
 
+export const load = async () => {
+  return {
+    query: {}
+  }
+}
 ---
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Welcome to RunWay!</title>
-  </head>
-  <body class="bg-gradient-to-t from-blue-500">
-      <LandingPage client:load/>
-  </body>
-</html>
+<Layout title="Welcome to runway">
+    <LandingPage client:load/>
+</Layout>
+      
 
 
 

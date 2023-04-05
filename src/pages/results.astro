@@ -1,5 +1,12 @@
 ---
 import ResultsPage from "../components/ResultsPage/ResultsPage";
+import Layout from "../layouts/Layout.astro";
+export const load = async({ query }) => {
+    const { budget } = query
+    return { budget}
+}
 ---
 
-<ResultsPage client:load/>
+<Layout title="Trips that fit">
+    <ResultsPage client:load />
+</Layout>
