@@ -1,13 +1,9 @@
 ---
+// component imports
+
 import Layout from '../layouts/Layout.astro';
 import LandingPage from '../components/LandingPage/LandingPage.jsx'
-import ResultsPage from '../components/ResultsPage/ResultsPage.jsx';
 
-export const load = async () => {
-  return {
-    query: {}
-  }
-}
 ---
 <Layout title="Welcome to runway">
     <LandingPage client:load/>

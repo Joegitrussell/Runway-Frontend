@@ -1,20 +1,19 @@
 import { useState } from "react";
-// import { useStore } from "@nanostores/react";
-// import { budgetStore } from "../../store/runwayStore.js";
 // import Navbar from "../Navbar/Navbar";
 import landingPageImage from "../../assets/images/RunWay_ob1.png";
 import Runway from "../../assets/images/RunWay.png";
 
 export default function LandingPage() {
   const [userBudget, setUserBudget] = useState("");
-  // const budget = useStore(budgetStore);
 
   const handleBudgetChange = (event) => {
     setUserBudget(parseInt(event.target.value));
   };
 
   const handleButtonClick = () => {
-    window.location.href = "/results?budget=${userBudget}";
+    const budgetValue = parseInt(userBudget);
+    window.localStorage.setItem("budget", budgetValue);
+    window.location.href = "/results";
   };
 
   return (
@@ -46,7 +45,7 @@ export default function LandingPage() {
           className="btn mb-20 bg-secondary text-black w-64 h-12 font-style: italic"
           onClick={handleButtonClick}
         >
-          {/* <a href="/results">Prepare for takeoff!</a> */}
+          Prepare for takeoff!
         </button>
       </div>
     </div>
