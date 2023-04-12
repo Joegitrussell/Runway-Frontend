@@ -1,15 +1,15 @@
 export const locations = {
-  paris: {
+  Paris: {
     base: 50,
     mid: 75,
     peak: 100,
   },
-  london: {
+  London: {
     base: 60,
     mid: 90,
     peak: 120,
   },
-  newyork: {
+  NewYork: {
     base: 70,
     mid: 105,
     peak: 140,
