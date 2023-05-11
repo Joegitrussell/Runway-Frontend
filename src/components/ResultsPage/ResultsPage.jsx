@@ -4,23 +4,23 @@ import { locations } from "../../data/locationData.js";
 export default function ResultsPage() {
   const budget = parseInt(localStorage.getItem("budget"));
 
-  const calculateStayDuration = (budget) => {
-    const stayDuration = {};
-    Object.keys(locations).forEach((location) => {
-      stayDuration[location] = {
-        base: Math.floor(budget / locations[location].base),
-        mid: Math.floor(budget / locations[location].mid),
-        peak: Math.floor(budget / locations[location].peak),
-      };
-    });
-    return stayDuration;
-  };
+  // const calculateStayDuration = (budget) => {
+  //   const stayDuration = {};
+  //   Object.keys(locations).forEach((location) => {
+  //     stayDuration[location] = {
+  //       base: Math.floor(budget / locations[location].base),
+  //       mid: Math.floor(budget / locations[location].mid),
+  //       peak: Math.floor(budget / locations[location].peak),
+  //     };
+  //   });
+  //   return stayDuration;
+  // };
 
-  const [stayDuration, setStayDuration] = useState({});
+   const [stayDuration, setStayDuration] = useState({selected: 0});
 
-  useEffect(() => {
-    setStayDuration(calculateStayDuration(budget));
-  }, [budget]);
+  // useEffect(() => {
+  //   setStayDuration(calculateStayDuration(budget));
+  // }, []);
 
   const handleSliderChange = (event, location) => {
     setStayDuration((prevState) => ({
@@ -28,8 +28,10 @@ export default function ResultsPage() {
       [location]: {
         ...prevState[location],
         selected: parseInt(event.target.value)
+        
       }
     }));
+    console.log(stayDuration)
   };
 
   return (
@@ -49,7 +51,7 @@ export default function ResultsPage() {
                       <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white px-2 py-1">
                         <div className="flex flex-col items-center justify-center text-center">
                           <div className="text-7xl">
-                            {stayDuration[location].selected}
+                            {Math.round(budget/(stayDuration[location].selected))}
                           </div>
                           <div>
                             Days
@@ -60,21 +62,21 @@ export default function ResultsPage() {
                   </div>
               <div className="card-body">
                 {/* <h2 className="card-title">{location}</h2> */}
-                {stayDuration[location] && <div>Base: {stayDuration[location].base} days</div>}
+              
                 <div className="card-actions justify-end">
                   <input
                     type="range"
-                    min="0"
-                    max={budget}
+                    min={data.base}
+                    max={data.peak}
                     value={stayDuration[location]?.selected || 0}
                     className="range"
-                    step={data.base}
+                    step={data.base/2}
                     onChange={(event) => handleSliderChange(event, location)}
                   />
                   <div className="w-full flex justify-between text-xs px-2">
-                    <span>{stayDuration[location]?.base}</span>
-                    <span>{stayDuration[location]?.mid}</span>
-                    <span>{stayDuration[location]?.peak}</span>
+                    <span>Base</span>
+                    <span>Mid</span>
+                    <span>Peak</span>
                   </div>
                 </div>
               </div>
