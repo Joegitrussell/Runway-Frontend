@@ -32,7 +32,7 @@ export default function LandingPage() {
         travel budget and we'll show you where you can go. Let's explore!
       </p>
       <div className="flex flex-col justify-center items-center gap-5">
-        <h2 className="text-3xl col text-black font-style: italic p-2">
+        <h2 className="text-3xl col text-black font-style: italic p-2 font-sans">
           What's your budget?
         </h2>
         <input
@@ -42,7 +42,7 @@ export default function LandingPage() {
           onChange={handleBudgetChange}
         />
         <button
-          className="btn mb-20 bg-secondary text-black w-64 h-12 font-style: italic"
+          className="btn mb-20 bg-secondary text-black w-64 h-12 font-style: italic font-sans"
           onClick={handleButtonClick}
         >
           Prepare for takeoff!
